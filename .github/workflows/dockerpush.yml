@@ -51,6 +51,7 @@ jobs:
   # run scrip for pulling image on the server
   update_ssh_vps:
     name: update image on vps
+    needs: "push_to_registry"
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
